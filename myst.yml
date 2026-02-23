@@ -55,10 +55,10 @@ project:
           children:
             - file: docs/seminars/fr/01_environment_setup.ipynb
               title: "1 · Configuration & Syntaxe Python"
-            # - file: docs/seminars/fr/02_python_control_structures.ipynb
-            #   title: "2 · Bases de Python I : Contrôle"
-            # - file: docs/seminars/fr/03_python_data_structures.ipynb
-            #   title: "3 · Bases de Python II : Données"
+            - file: docs/seminars/fr/02_python_control_structures.ipynb
+              title: "2 · Bases de Python I : Contrôle"
+            - file: docs/seminars/fr/03_python_data_structures.ipynb
+              title: "3 · Bases de Python II : Données"
             # - file: docs/seminars/fr/04_transfer_workshop.ipynb
             #   title: "4 · Atelier de transfert & Projet"
             # - file: docs/seminars/fr/05_data_structures_impl.ipynb

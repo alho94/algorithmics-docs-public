@@ -80,3 +80,6 @@ dmypy.json
 
 # ----- Translation cache -----
 .translation_hashes.json
+
+# MyST build outputs
+_build
