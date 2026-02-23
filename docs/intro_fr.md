@@ -29,7 +29,7 @@ Bienvenue dans le séminaire d'**Algorithmique & Structures de données**. Chaqu
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/alho94/algorithmics.git
+git clone https://github.com/alho94/algorithmics-docs-public.git
 cd algorithmics
 
 # 2. Créer et activer un environnement virtuel

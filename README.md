@@ -33,7 +33,7 @@ algorithmics/
 
 ```bash
 # 1. Clone
-git clone https://github.com/alho94/algorithmics.git
+git clone https://github.com/alho94/algorithmics-docs-public.git
 cd algorithmics
 
 # 2. Create a virtual environment

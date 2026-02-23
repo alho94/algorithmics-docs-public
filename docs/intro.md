@@ -27,7 +27,7 @@ Welcome to the seminar for **Algorithmics & Data Structures**. Each week, you wi
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/alho94/algorithmics.git
+git clone https://github.com/alho94/algorithmics-docs-public.git
 cd algorithmics
 
 # 2. Create and activate a virtual environment

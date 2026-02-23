@@ -13,7 +13,7 @@ project:
   authors:
     - name: Alexander Horst
       email: alexander.horst@unige.ch
-  github: https://github.com/alho94/algorithmics-docs-public/
+  github: https://github.com/alho94/algorithmics-docs-public-docs-public/
   toc:
     - file: docs/intro.md
       title: Home
@@ -101,4 +101,4 @@ site:
       url: /intro-fr
   actions:
     - title: View on GitHub
-      url: https://github.com/alho94/algorithmics
+      url: https://github.com/alho94/algorithmics-docs-public
