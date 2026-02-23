@@ -1,0 +1,104 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  id: 41eb99cb-f9de-4add-b730-3b495a373457
+  title: Algorithmics & Data Structures
+  description: Seminar companion for the Algorithmics & Data Structures course at the University of Geneva (CUI BSc).
+  keywords:
+    - algorithmics
+    - data structures
+    - Python
+    - University of Geneva
+  authors:
+    - name: Alexander Horst
+      email: alexander.horst@unige.ch
+  github: https://github.com/alho94/algorithmics
+  toc:
+    - file: docs/intro.md
+      title: Home
+    - title: Seminars
+      children:
+        - file: docs/seminars/en/01_environment_setup.ipynb
+          title: "1 · Environment Setup & Python Syntax"
+        - file: docs/seminars/en/02_python_control_structures.ipynb
+          title: "2 · Python Basics I: Control Structures"
+        - file: docs/seminars/en/03_python_data_structures.ipynb
+          title: "3 · Python Basics II: Data Structures"
+        # - file: docs/seminars/en/04_transfer_workshop.ipynb
+        #   title: "4 · Transfer Workshop & Project Kickoff"
+        # - file: docs/seminars/en/05_data_structures_impl.ipynb
+        #   title: "5 · Data Structures"
+        # - file: docs/seminars/en/06_algorithmic_complexity.ipynb
+        #   title: "6 · Algorithmic Complexity"
+        # - file: docs/seminars/en/07_sorting_searching.ipynb
+        #   title: "7 · Sorting and Searching"
+        # - file: docs/seminars/en/08_trees_graphs.ipynb
+        #   title: "8 · Trees and Graphs"
+        # - file: docs/seminars/en/09_problem_solving_I.ipynb
+        #   title: "9 · Problem Solving I: Basics"
+        # - file: docs/seminars/en/10_problem_solving_II.ipynb
+        #   title: "10 · Problem Solving II: Advanced"
+        # - file: docs/seminars/en/11_backup_project.ipynb
+        #   title: "11 · Algorithmics Backup / Project"
+        # - file: docs/seminars/en/12_python_best_practices.ipynb
+        #   title: "12 · Python Best Practices"
+        # - file: docs/seminars/en/13_code_review.ipynb
+        #   title: "13 · Introduction to Code Review"
+        # - file: docs/seminars/en/14_exam_review.ipynb
+        #   title: "14 · Exam Review & FAQ"
+    - title: Français
+      children:
+        - file: docs/intro_fr.md
+          title: "Accueil (FR)"
+        - title: Séminaires
+          children:
+            - file: docs/seminars/fr/01_environment_setup.ipynb
+              title: "1 · Configuration & Syntaxe Python"
+            # - file: docs/seminars/fr/02_python_control_structures.ipynb
+            #   title: "2 · Bases de Python I : Contrôle"
+            # - file: docs/seminars/fr/03_python_data_structures.ipynb
+            #   title: "3 · Bases de Python II : Données"
+            # - file: docs/seminars/fr/04_transfer_workshop.ipynb
+            #   title: "4 · Atelier de transfert & Projet"
+            # - file: docs/seminars/fr/05_data_structures_impl.ipynb
+            #   title: "5 · Structures de données"
+            # - file: docs/seminars/fr/06_algorithmic_complexity.ipynb
+            #   title: "6 · Complexité algorithmique"
+            # - file: docs/seminars/fr/07_sorting_searching.ipynb
+            #   title: "7 · Tri et recherche"
+            # - file: docs/seminars/fr/08_trees_graphs.ipynb
+            #   title: "8 · Arbres et graphes"
+            # - file: docs/seminars/fr/09_problem_solving_I.ipynb
+            #   title: "9 · Résolution de problèmes I"
+            # - file: docs/seminars/fr/10_problem_solving_II.ipynb
+            #   title: "10 · Résolution de problèmes II"
+            # - file: docs/seminars/fr/11_backup_project.ipynb
+            #   title: "11 · Algorithmique / Projet"
+            # - file: docs/seminars/fr/12_python_best_practices.ipynb
+            #   title: "12 · Bonnes pratiques Python"
+            # - file: docs/seminars/fr/13_code_review.ipynb
+            #   title: "13 · Revue de code"
+            # - file: docs/seminars/fr/14_exam_review.ipynb
+            #   title: "14 · Révision d'examen & FAQ"
+
+site:
+  template: book-theme
+  options:
+    hide_toc: false
+    hide_outline: false
+    hide_footer_links: false
+    logo_text: "Algorithmics & Data Structures"
+    style: docs/_static/custom.css
+  parts:
+    footer: docs/footer.md
+  nav:
+    - title: University of Geneva - CUI
+      url: https://cui.unige.ch/fr/
+    - title: EN 🇬🇧
+      url: /index
+    - title: FR 🇫🇷
+      url: /intro-fr
+  actions:
+    - title: View on GitHub
+      url: https://github.com/alho94/algorithmics

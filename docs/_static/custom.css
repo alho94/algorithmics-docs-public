@@ -1,0 +1,205 @@
+/* ============================================================
+   Algorithmics & Data Structures — University of Geneva
+   Custom stylesheet for Jupyter Book (MyST / book-theme)
+   Primary brand colour: UNIGE berry/crimson #B5245A
+   ============================================================ */
+
+/* ---------- Brand colours ---------- */
+:root {
+  --unige-primary:  #B5245A;   /* exact colour from screenshot */
+  --unige-dark:     #1A1A2E;
+  --unige-gray:     #6C757D;
+  --unige-light:    #F8F9FA;
+  --code-bg:        #F4F4F8;
+  --link-color:     #B5245A;
+}
+
+/* ---- Header / top navbar background ---- */
+/* MyST book-theme actual selector: div.myst-top-nav */
+div.myst-top-nav {
+  background-color: var(--unige-primary) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25) !important;
+}
+
+/* All text, links, icons inside the header bar → white */
+div.myst-top-nav .myst-top-nav-bar a,
+div.myst-top-nav .myst-top-nav-bar button,
+div.myst-top-nav .myst-top-nav-bar > div span,
+div.myst-top-nav .myst-top-nav-bar svg,
+div.myst-top-nav .myst-top-nav-bar nav a {
+  color: #ffffff !important;
+  fill:  #ffffff !important;
+}
+
+div.myst-top-nav .myst-top-nav-bar a:hover {
+  color: rgba(255,255,255,0.75) !important;
+  text-decoration: none;
+}
+
+/* Search box inside header */
+div.myst-top-nav input {
+  background: rgba(255,255,255,0.15) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+div.myst-top-nav input::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* ---- Hide default "Made with MyST" sidebar branding ---- */
+.footer-logos,
+.myst-footer-logo,
+[class*="madeWith"],
+[class*="made-with"],
+[class*="MadeWith"] {
+  display: none !important;
+}
+
+/* ---- Left sidebar ---- */
+.bd-sidebar {
+  background-color: var(--unige-light);
+  border-right: 1px solid #e0e0e0;
+}
+
+.bd-sidebar .nav-link.active,
+.bd-sidebar .nav-link:hover {
+  color: var(--unige-primary) !important;
+  font-weight: 600;
+}
+
+.bd-sidebar .caption {
+  color: var(--unige-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 1.2rem;
+}
+
+/* ---- Navigation links in sidebar (MyST book-theme selectors) ---- */
+nav[aria-label] a.active,
+nav[aria-label] a:hover {
+  color: var(--unige-primary) !important;
+}
+
+/* ---- Main content ---- */
+.bd-content {
+  max-width: 940px;
+}
+
+h1 {
+  color: var(--unige-dark);
+  border-bottom: 3px solid var(--unige-primary);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  color: var(--unige-dark);
+  border-left: 4px solid var(--unige-primary);
+  padding-left: 0.6rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  color: var(--unige-gray);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--unige-dark);
+}
+
+/* ---- Code cells ---- */
+.cell_output pre,
+div.highlight pre,
+.highlight {
+  background-color: var(--code-bg) !important;
+  border-left: 3px solid var(--unige-primary);
+  border-radius: 4px;
+}
+
+code {
+  color: var(--unige-dark);
+  background-color: #EEEEF5;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+/* ---- Admonitions ---- */
+.admonition.note   { border-left-color: var(--unige-primary); }
+.admonition.tip    { border-left-color: #28a745; }
+.admonition.warning{ border-left-color: #ffc107; }
+
+/* ---- Tables ---- */
+table.table          { font-size: 0.9rem; }
+table thead th       { background-color: var(--unige-primary); color: white; }
+table tbody tr:hover { background-color: #FFF0F4; }
+
+/* ---- Footer ---- */
+footer {
+  border-top: 2px solid var(--unige-primary);
+  padding: 0.2rem 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  font-size: 0.82rem;
+  color: var(--unige-gray);
+  text-align: center;
+}
+
+footer > * {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+footer p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer img,
+.footer img {
+  height: 1.2em;
+  width: auto;
+  vertical-align: middle;
+  display: inline;
+}
+
+/* ---- Jupyter cell inputs ---- */
+.cell_input {
+  border-left: 3px solid #DEE2E6;
+  transition: border-color 0.2s;
+}
+.cell_input:hover {
+  border-left-color: var(--unige-primary);
+}
+
+/* ---- Hide FR sidebar section (language switch is in header nav) ----
+   The "Français" TOC group must remain in myst.yml so the FR pages are
+   built, but the entry point lives in the header dropdown (EN / FR).
+   Structure: nav.myst-primary-sidebar-toc > div.myst-toc > div (per section). */
+.myst-toc > div:has([title="Français"]) {
+  display: none !important;
+}
+
+/* ---- Prev / Next buttons ---- */
+.prev-next-area a {
+  color: var(--unige-primary);
+  border: 1px solid var(--unige-primary);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+.prev-next-area a:hover {
+  background-color: var(--unige-primary);
+  color: white;
+  text-decoration: none;
+}
+
