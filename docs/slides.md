@@ -6,7 +6,7 @@ Slide decks for each seminar session — available as interactive **HTML** (Reve
 |---|---------|--------|-----|
 | 01 | Environment Setup & Python Syntax | [View slides ↗](./_static/slides/en/01_environment_setup.html) | [Download PDF](./_static/slides/en/01_environment_setup.html#print-pdf) |
 | 02 | Python Basics I: Control Structures | [View slides ↗](./_static/slides/en/02_python_control_structures.html) | [Download PDF](./_static/slides/en/02_python_control_structures.html#print-pdf) |
-| 03 | Python Basics II: OOP & Data Structures | [View slides ↗](./_static/slides/en/03_python_data_structures.html) | [Download PDF](./_static/slides/en/03_python_data_structures.html#print-pdf) |
+<!-- | 03 | Python Basics II: OOP & Data Structures | [View slides ↗](./_static/slides/en/03_python_data_structures.html) | [Download PDF](./_static/slides/en/03_python_data_structures.html#print-pdf) | -->
 <!-- | 04 | Project Kickoff | [View slides ↗](./_static/slides/en/04_project_kickoff.html) | [Download PDF](./_static/slides/en/04_project_kickoff.html#print-pdf) |
 | 05 | Data Structures | [View slides ↗](./_static/slides/en/05_data_structures.html) | [Download PDF](./_static/slides/en/05_data_structures.html#print-pdf) |
 | 06 | Algorithmic Complexity | [View slides ↗](./_static/slides/en/06_algorithmic_complexity.html) | [Download PDF](./_static/slides/en/06_algorithmic_complexity.html#print-pdf) |

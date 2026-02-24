@@ -8,7 +8,7 @@ Welcome to the seminar for **Algorithmics & Data Structures**. Each week, you wi
 |---|---------------|--------|---------|
 | 1 | Welcoming Session & Getting Started | [Slides ↗](./_static/slides/en/01_environment_setup.html) | [Session](./seminars/en/01_environment_setup.ipynb) |
 | 2 | Python Basics I: Control Structures | [Slides ↗](./_static/slides/en/02_python_control_structures.html) | [Session](./seminars/en/02_python_control_structures.ipynb) |
-| 3 | Python Basics II: Data Structures | [Slides ↗](./_static/slides/en/03_python_data_structures.html) | [Session](./seminars/en/03_python_data_structures.ipynb) |
+<!-- | 3 | Python Basics II: Data Structures | [Slides ↗](./_static/slides/en/03_python_data_structures.html) | [Session](./seminars/en/03_python_data_structures.ipynb) | -->
 <!-- | 4 | Transfer Workshop & Project Kickoff | [Slides ↗](./_static/slides/en/04_project_kickoff.html) | [Session](./seminars/en/04_transfer_workshop.ipynb) |
 | 5 | Data Structures | [Slides ↗](./_static/slides/en/05_data_structures.html) | [Session](./seminars/en/05_data_structures_impl.ipynb) |
 | 6 | Algorithmic Complexity | [Slides ↗](./_static/slides/en/06_algorithmic_complexity.html) | [Session](./seminars/en/06_algorithmic_complexity.ipynb) |

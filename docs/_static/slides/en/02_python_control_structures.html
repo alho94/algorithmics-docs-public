@@ -259,6 +259,19 @@
     }
     .reveal table tbody tr.odd { background: #f8f8fc; }
     .reveal table tbody tr:hover { background: #eff0f8; }
+    .reveal table tbody td.cell-python {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .reveal table tbody td .table-python {
+      display: block;
+      white-space: pre;
+      font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+      font-size: 0.85em;
+      line-height: 1.25;
+      color: var(--dark);
+      background: transparent;
+    }
 
     /* ----- Image ----- */
     .img-wrap {
@@ -536,17 +549,24 @@ if 0 &lt; x &lt; 100:     # ✓ chained comparison</code></pre>
   <h2 class="slide-title">Branching &amp; Looping</h2>
   <p class="mixed-text"><strong>if / elif / else</strong> — choose a path based on conditions:</p>
   <pre><code class="language-python">score = 78
-if score &gt;= 90:    grade = &#x27;A&#x27;
-elif score &gt;= 75:  grade = &#x27;B&#x27;
-else:              grade = &#x27;F&#x27;</code></pre>
+if score &gt;= 90:
+    grade = &#x27;A&#x27;
+elif score &gt;= 75:
+    grade = &#x27;B&#x27;
+else:
+     grade = &#x27;F&#x27;</code></pre>
   <p class="mixed-text"><strong>for</strong> — iterate over any sequence (range, list, dict, …):</p>
   <pre><code class="language-python">for i, name in enumerate([&#x27;Alice&#x27;, &#x27;Bob&#x27;]):
     print(i, name)     # 0 Alice, 1 Bob</code></pre>
   <p class="mixed-text"><strong>while</strong> — repeat until a condition changes; use <strong>break</strong> / <strong>continue</strong> for control:</p>
   <pre><code class="language-python">while True:
     val = input(&#x27;Enter a positive number: &#x27;)
-    if val.isdigit() and int(val) &gt; 0:
-        break</code></pre>
+    if val == &quot;stop&quot;:
+        break
+    elif not val.isdigit():
+        print(&quot;only int allowed&quot;)
+    else:
+        print(f&quot;you entered {val}&quot;)</code></pre>
   <div class="print-slide-num">4 / 11</div>
 </section>
 <section class="slide-table">
@@ -554,18 +574,18 @@ else:              grade = &#x27;F&#x27;</code></pre>
   <div class="table-container">
     <table>
       <thead><tr><th>Pattern</th><th>Traditional for-loop</th><th>List comprehension</th></tr></thead>
-      <tbody><tr class="odd"><td>Basic transform</td><td>squares = []
+      <tbody><tr class="odd"><td>Basic transform</td><td class="cell-python"><code class="table-python">squares = []
 for x in range(10):
-    squares.append(x**2)</td><td>squares = [x**2 for x in range(10)]</td></tr>
-<tr class=""><td>With filter</td><td>evens = []
+    squares.append(x**2)</code></td><td class="cell-python"><code class="table-python">squares = [x**2 for x in range(10)]</code></td></tr>
+<tr class=""><td>With filter</td><td class="cell-python"><code class="table-python">evens = []
 for x in range(20):
     if x % 2 == 0:
-        evens.append(x)</td><td>evens = [x for x in range(20) if x % 2 == 0]</td></tr>
-<tr class="odd"><td>Nested (⚠ O(n²))</td><td>pairs = []
+        evens.append(x)</code></td><td class="cell-python"><code class="table-python">evens = [x for x in range(20) if x % 2 == 0]</code></td></tr>
+<tr class="odd"><td>Nested (⚠ O(n²))</td><td class="cell-python"><code class="table-python">pairs = []
 for x in range(3):
     for y in range(3):
-        pairs.append((x,y))</td><td>pairs = [(x,y) for x in range(3)
-         for y in range(3)]</td></tr>
+        pairs.append((x,y))</code></td><td class="cell-python"><code class="table-python">pairs = [(x,y) for x in range(3)
+         for y in range(3)]</code></td></tr>
 </tbody>
     </table>
   </div>

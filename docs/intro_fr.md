@@ -12,7 +12,7 @@ Bienvenue dans le séminaire d'**Algorithmique & Structures de données**. Chaqu
 |---|-------------------|--------------|------------|
 | 1 | Session d'accueil & Premiers pas | [Diapositives ↗](./_static/slides/fr/01_environment_setup.html) | [Séance](./seminars/fr/01_environment_setup.ipynb) |
 | 2 | Bases de Python I : Structures de contrôle | [Diapositives ↗](./_static/slides/fr/02_python_control_structures.html) | [Séance](./seminars/fr/02_python_control_structures.ipynb) |
-| 3 | Bases de Python II : Structures de données | [Diapositives ↗](./_static/slides/fr/03_python_data_structures.html) | [Séance](./seminars/fr/03_python_data_structures.ipynb) |
+<!-- | 3 | Bases de Python II : Structures de données | [Diapositives ↗](./_static/slides/fr/03_python_data_structures.html) | [Séance](./seminars/fr/03_python_data_structures.ipynb) | -->
 <!-- | 4 | Atelier de transfert & Lancement du projet | [Diapositives ↗](./_static/slides/fr/04_project_kickoff.html) | [Séance](./seminars/fr/04_transfer_workshop.ipynb) |
 | 5 | Structures de données | [Diapositives ↗](./_static/slides/fr/05_data_structures.html) | [Séance](./seminars/fr/05_data_structures_impl.ipynb) |
 | 6 | Complexité algorithmique | [Diapositives ↗](./_static/slides/fr/06_algorithmic_complexity.html) | [Séance](./seminars/fr/06_algorithmic_complexity.ipynb) |
