@@ -517,11 +517,11 @@
 <section class="slide-content">
   <h2 class="slide-title">Today&#x27;s Agenda</h2>
   <ul class="bullets">
-<li class="">Truthiness — Python&#x27;s approach to True / False</li>
-<li class="">Branching &amp; looping: if / for / while</li>
-<li class="">Why complexity matters — a preamble</li>
-<li class="">Big O notation in Python</li>
-<li class="">List comprehensions — concise &amp; fast</li>
+<li class="fragment" data-fragment-index="0">Truthiness — Python&#x27;s approach to True / False</li>
+<li class="fragment" data-fragment-index="1">Branching &amp; looping: if / for / while</li>
+<li class="fragment" data-fragment-index="2">Why complexity matters — a preamble</li>
+<li class="fragment" data-fragment-index="3">Big O notation in Python</li>
+<li class="fragment" data-fragment-index="4">List comprehensions — concise &amp; fast</li>
   </ul>
   <div class="print-slide-num">2 / 11</div>
 </section>
@@ -594,15 +594,15 @@ for x in range(3):
 <section class="slide-content">
   <h2 class="slide-title">Preamble: Why Does Complexity Matter?</h2>
   <ul class="bullets">
-<li class="">Every algorithm consumes <strong>resources</strong>: time and memory</li>
-<li class="">As input grows, poorly scaling code hits real-world limits</li>
-<li class="sub-bullet">A brute-force solution may work for 100 items but crash at 1,000,000</li>
-<li class=""><strong>Big O notation</strong> — O(…) — describes how resource usage grows with input size <strong>n</strong></li>
-<li class="">Two key dimensions:</li>
-<li class="sub-bullet"><strong>Time complexity</strong> — how many steps / operations</li>
-<li class="sub-bullet"><strong>Space complexity</strong> — how much memory is used</li>
-<li class="">Goal: pick algorithms that scale well for the problem at hand</li>
-<li class="">We will formalise this in <strong>Seminar 6</strong> — this is your primer</li>
+<li class="fragment" data-fragment-index="0">Every algorithm consumes <strong>resources</strong>: time and memory</li>
+<li class="fragment" data-fragment-index="1">As input grows, poorly scaling code hits real-world limits</li>
+<li class="sub-bullet fragment" data-fragment-index="2">A brute-force solution may work for 100 items but crash at 1,000,000</li>
+<li class="fragment" data-fragment-index="3"><strong>Big O notation</strong> — O(…) — describes how resource usage grows with input size <strong>n</strong></li>
+<li class="fragment" data-fragment-index="4">Two key dimensions:</li>
+<li class="sub-bullet fragment" data-fragment-index="5"><strong>Time complexity</strong> — how many steps / operations</li>
+<li class="sub-bullet fragment" data-fragment-index="6"><strong>Space complexity</strong> — how much memory is used</li>
+<li class="fragment" data-fragment-index="7">Goal: pick algorithms that scale well for the problem at hand</li>
+<li class="fragment" data-fragment-index="8">We will formalise this in <strong>Seminar 6</strong> — this is your primer</li>
   </ul>
   <div class="print-slide-num">6 / 11</div>
 </section>
@@ -625,23 +625,23 @@ for x in range(3):
 <section class="slide-content">
   <h2 class="slide-title">Today&#x27;s Exercises</h2>
   <ul class="bullets">
-<li class="">Ex 1 — find_max(a,b,c) using if/elif/else</li>
-<li class="">Ex 2 — FizzBuzz (classic interview question)</li>
-<li class="">Ex 3 — Leap year checker</li>
-<li class="">Ex 4 — Calculator loop: keep asking until &#x27;quit&#x27;</li>
-<li class="">Ex 5 — Print multiplication table for n</li>
+<li class="fragment" data-fragment-index="0">Ex 1 — find_max(a,b,c) using if/elif/else</li>
+<li class="fragment" data-fragment-index="1">Ex 2 — FizzBuzz (classic interview question)</li>
+<li class="fragment" data-fragment-index="2">Ex 3 — Leap year checker</li>
+<li class="fragment" data-fragment-index="3">Ex 4 — Calculator loop: keep asking until &#x27;quit&#x27;</li>
+<li class="fragment" data-fragment-index="4">Ex 5 — Print multiplication table for n</li>
   </ul>
   <div class="print-slide-num">9 / 11</div>
 </section>
 <section class="slide-content">
   <h2 class="slide-title">Key Takeaways</h2>
   <ul class="bullets">
-<li class="">Python&#x27;s truthiness: use if not items, if x is None</li>
-<li class="">if / for / while cover all control flow you need</li>
-<li class="">Prefer enumerate() over range(len(...))</li>
-<li class="">Big O tells you how code scales — O(n) vs O(n²) matters</li>
-<li class="">List comprehensions are faster and more readable than loops</li>
-<li class="">Always think: how many times does this loop run?</li>
+<li class="fragment" data-fragment-index="0">Python&#x27;s truthiness: use if not items, if x is None</li>
+<li class="fragment" data-fragment-index="1">if / for / while cover all control flow you need</li>
+<li class="fragment" data-fragment-index="2">Prefer enumerate() over range(len(...))</li>
+<li class="fragment" data-fragment-index="3">Big O tells you how code scales — O(n) vs O(n²) matters</li>
+<li class="fragment" data-fragment-index="4">List comprehensions are faster and more readable than loops</li>
+<li class="fragment" data-fragment-index="5">Always think: how many times does this loop run?</li>
   </ul>
   <div class="print-slide-num">10 / 11</div>
 </section>
