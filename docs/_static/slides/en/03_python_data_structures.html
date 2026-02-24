@@ -408,6 +408,83 @@
     }
     .reveal .slide-number-a { color: var(--berry); }
 
+    /* ----- Pseudocode ----- */
+    .slide-pseudo {
+      display: flex;
+      flex-direction: column;
+    }
+    .pseudo-lines {
+      list-style: none;
+      padding: 18px 24px;
+      margin: 0;
+      flex: 1;
+      background: #f0f4f8;
+      border-left: 4px solid var(--berry);
+      border-radius: 6px;
+      overflow: auto;
+      font-family: 'Georgia', 'Palatino', serif;
+      font-style: italic;
+    }
+    .pseudo-lines li {
+      font-size: 0.8em;
+      line-height: 1.7;
+      color: var(--dark);
+      padding: 2px 0;
+    }
+    .pseudo-num {
+      color: var(--berry);
+      font-weight: bold;
+      font-style: normal;
+      margin-right: 8px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 0.85em;
+    }
+    .pseudo-footer {
+      display: flex;
+      gap: 40px;
+      background: var(--berry);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 0 0 6px 6px;
+      font-size: 0.72em;
+      flex-shrink: 0;
+      margin-top: -4px;
+    }
+    .pseudo-footer strong {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-style: normal;
+    }
+
+    /* ----- Callout ----- */
+    .slide-callout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .callout-box {
+      border-left: 6px solid var(--berry);
+      background: #fdf0f5;
+      border-radius: 8px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1;
+      margin-top: 8px;
+    }
+    .callout-icon {
+      font-size: 2.4em;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 4px;
+    }
+    .callout-body {
+      font-size: 0.95em;
+      line-height: 1.75;
+      color: var(--dark);
+      margin: 0;
+    }
+
   </style>
 </head>
 <body>
@@ -506,23 +583,17 @@
   <div class="print-slide-num">7 / 14</div>
 </section>
 <section class="slide-code">
-  <h2 class="slide-title">Classes in Python</h2>
-  <div class="code-desc">A class bundles state (__init__) and behaviour (methods):</div>
-  <pre><code class="language-python">class Student:
-    def __init__(self, name: str, grade: int):
-        self.name = name        # instance attribute
-        self.grade = grade
+  <h2 class="slide-title">Classes in Python — Anatomy</h2>
+  <div class="code-desc">Every class has three building blocks (full example in the seminar notebook):</div>
+  <pre><code class="language-python">class ClassName:
+    def __init__(self, attr):   # constructor — runs on MyClass()
+        self.attr = attr        # instance attribute (own data)
 
-    def is_passing(self, threshold: int = 50) -&gt; bool:
-        return self.grade &gt;= threshold
+    def method(self):           # behaviour — acts on self.attr
+        return self.attr
 
-    def __repr__(self) -&gt; str:
-        return f&#x27;Student({self.name!r}, {self.grade})&#x27;
-
-alice = Student(&#x27;Alice&#x27;, 87)
-bob   = Student(&#x27;Bob&#x27;, 42)
-print(alice.is_passing())   # True
-print(bob.is_passing())     # False</code></pre>
+    def __repr__(self):         # printable representation
+        return f&#x27;ClassName({self.attr!r})&#x27;  # shown in REPL / debugger</code></pre>
   <div class="print-slide-num">8 / 14</div>
 </section>
 <section class="slide-mixed">

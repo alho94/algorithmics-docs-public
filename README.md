@@ -7,7 +7,7 @@ Built with [Jupyter Book v2](https://jupyterbook.org/) (MyST) · Deployed via Gi
 
 ## Live site
 
-> <https://alho94.github.io/algorithmics>
+> <https://github.com/alho94/algorithmics-docs-public>
 
 ---
 
