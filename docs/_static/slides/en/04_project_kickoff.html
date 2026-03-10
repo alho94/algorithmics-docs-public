@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Introduction to the Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+  <style>
+    :root {
+      --berry: #B5245A;
+      --dark:  #1a1a2e;
+      --code-bg: #f6f8fa;
+      --border:  #dde1e7;
+    }
+    .reveal {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    .reveal h1, .reveal h2, .reveal h3 {
+      text-transform: none;
+      letter-spacing: -0.01em;
+    }
+    /* Every section is a flex column */
+    .reveal .slides section {
+      text-align: left;
+      padding: 30px 50px 20px;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    /* ----- Cover ----- */
+    .slide-cover {
+      justify-content: center !important;
+      padding: 60px !important;
+    }
+    .cover-uni {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.55em;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .cover-title {
+      color: #fff !important;
+      font-size: 1.9em !important;
+      line-height: 1.2;
+      margin: 0 0 14px 0 !important;
+    }
+    .cover-subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9em;
+      margin-bottom: 40px;
+    }
+    .pdf-download-btn {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 100;
+      width: 36px;
+      height: 36px;
+      background: rgba(181, 36, 90, 0.10);
+      border: 1.5px solid rgba(181, 36, 90, 0.30);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .pdf-download-btn:hover { background: rgba(181, 36, 90, 0.25); }
+    .pdf-download-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--berry);
+      fill: none;
+    }
+    .print-slide-num {
+      display: none;
+    }
+    html.print-pdf .reveal .slide-number-pdf {
+      display: none !important;
+    }
+    html.print-pdf .reveal .slides .pdf-page {
+      overflow: visible !important;
+    }
+    html.print-pdf .reveal .slides section {
+      padding: 50px 55px 45px !important;
+      border: none !important;
+      box-shadow: inset 0 0 0 1.5px var(--berry) !important;
+      outline: none !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    html.print-pdf .slide-cover {
+      padding: 65px !important;
+    }
+    html.print-pdf .reveal pre {
+      max-width: 100% !important;
+      overflow: hidden !important;
+    }
+    html.print-pdf .table-container {
+      max-width: 100% !important;
+      overflow: hidden !important;
+    }
+    html.print-pdf .print-slide-num {
+      display: block !important;
+      margin-top: auto;
+      margin-bottom: -30px;
+      align-self: flex-end;
+      font-size: 0.6em;
+      color: var(--berry);
+    }
+    html.print-pdf .reveal .controls {
+      display: none !important;
+    }
+    @media print {
+      .pdf-download-btn { display: none !important; }
+      .reveal .slide-number { display: none !important; }
+      @page { margin: 10mm; }
+    }
+
+    /* ----- Section title ----- */
+    .slide-title {
+      color: var(--dark) !important;
+      font-size: 1.1em !important;
+      font-weight: 700;
+      margin: 0 0 14px 0 !important;
+      padding-bottom: 10px !important;
+      border-bottom: 3px solid var(--berry);
+      flex-shrink: 0;
+    }
+
+    /* ----- Bullets ----- */
+    .bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex: 1;
+      overflow: hidden;
+    }
+    .bullets li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+      font-size: 0.75em;
+      line-height: 1.45;
+      color: var(--dark);
+    }
+    .bullets li::before {
+      content: '▸';
+      color: var(--berry);
+      position: absolute;
+      left: 0;
+      top: 6px;
+      font-size: 0.85em;
+    }
+    .bullets li.sub-bullet {
+      padding-left: 42px;
+      font-size: 0.7em;
+      color: #555;
+    }
+    .bullets li.sub-bullet::before {
+      content: '–';
+      font-size: 1em;
+      top: 5px;
+    }
+    ol.bullets {
+      list-style: decimal;
+      padding-left: 1.6em;
+    }
+    ol.bullets li {
+      padding-left: 6px;
+    }
+    ol.bullets li::before {
+      content: none;
+    }
+    ol.bullets li::marker {
+      color: var(--berry);
+      font-weight: bold;
+    }
+
+    /* ----- Code ----- */
+    .code-desc {
+      font-size: 0.7em;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+    .reveal pre {
+      background: var(--code-bg) !important;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px !important;
+      box-shadow: none !important;
+      overflow: auto;
+      max-height: 65vh;
+      width: 100% !important;
+      margin: 0 !important;
+      flex: 1;
+    }
+    .reveal pre code {
+      font-size: 0.65em !important;
+      line-height: 1.45 !important;
+      font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace !important;
+      background: transparent !important;
+      padding: 0 !important;
+      color: var(--dark) !important;
+    }
+
+    /* ----- Mixed (text + code) ----- */
+    .slide-mixed {
+      display: flex;
+      flex-direction: column;
+      padding: 0 40px 30px;
+    }
+    .slide-mixed .mixed-text {
+      font-size: 0.75em;
+      color: var(--dark);
+      margin: 4px 0;
+      text-align: left;
+    }
+    .slide-mixed pre {
+      margin: 4px 0 !important;
+      flex: none;
+      max-height: none;
+    }
+    .slide-mixed pre code {
+      font-size: 0.6em !important;
+    }
+
+    /* ----- Table ----- */
+    .table-container {
+      overflow: auto;
+      flex: 1;
+    }
+    .reveal table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.7em;
+      margin: 0;
+    }
+    .reveal table thead tr { background: var(--berry); color: #fff; }
+    .reveal table thead th {
+      padding: 9px 13px;
+      text-align: left;
+      font-weight: 600;
+      border: none;
+    }
+    .reveal table tbody td {
+      padding: 7px 13px;
+      border: none;
+      vertical-align: top;
+    }
+    .reveal table tbody tr.odd { background: #f8f8fc; }
+    .reveal table tbody tr:hover { background: #eff0f8; }
+    .reveal table tbody td.cell-python {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .reveal table tbody td .table-python {
+      display: block;
+      white-space: pre;
+      font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+      font-size: 0.85em;
+      line-height: 1.25;
+      color: var(--dark);
+      background: transparent;
+    }
+
+    /* ----- Image ----- */
+    .img-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .img-wrap img {
+      max-width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+    }
+    .img-caption {
+      font-size: 0.6em;
+      color: #999;
+      font-style: italic;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .img-caption .cite { color: #aaa; }
+
+    /* ----- Image + bullets ----- */
+    .split-row {
+      display: flex;
+      gap: 24px;
+      flex: 1;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .split-img {
+      flex: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+    }
+    .split-img img {
+      max-width: 100%;
+      max-height: 64vh;
+      object-fit: contain;
+    }
+    .img-cite {
+      font-size: 0.58em;
+      color: #aaa;
+      font-style: italic;
+      margin-top: 4px;
+      text-align: center;
+    }
+    .split-bullets {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    /* ----- Two images side by side ----- */
+    .two-img-row {
+      display: flex;
+      gap: 30px;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+    }
+    .two-img-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 0;
+    }
+    .two-img-col img {
+      max-width: 100%;
+      max-height: 58vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .img-label {
+      margin-top: 10px;
+      font-size: 0.7em;
+      font-weight: 600;
+      color: var(--dark);
+      text-align: center;
+    }
+
+    /* ----- Content + image below ----- */
+    .slide-contentimg .bullets {
+      flex: 0 0 auto;
+    }
+    .contentimg-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .contentimg-wrap img {
+      max-width: 50%;
+      max-height: 45vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    /* ----- Two-column ----- */
+    .two-col {
+      display: flex;
+      gap: 30px;
+      flex: 1;
+      overflow: hidden;
+    }
+    .two-col .col { flex: 1; }
+
+    /* ----- Reveal controls — move to bottom-left ----- */
+    .reveal .controls {
+      left: 240px !important;
+      right: auto !important;
+      bottom: 12px !important;
+      display: block !important;
+      opacity: 1 !important;
+    }
+    .reveal .controls button {
+      color: var(--berry);
+      opacity: 0.7 !important;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      padding: 12px !important;
+    }
+    .reveal .controls button:hover {
+      opacity: 1 !important;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .reveal .progress { color: var(--berry); }
+    /* Slide number stays bottom-right, no overlap with controls */
+    .reveal .slide-number {
+      color: var(--berry);
+      font-size: 0.65em;
+      bottom: 16px;
+      right: 16px;
+      background: none !important;
+    }
+    .reveal .slide-number-a { color: var(--berry); }
+
+    /* ----- Pseudocode ----- */
+    .slide-pseudo {
+      display: flex;
+      flex-direction: column;
+    }
+    .pseudo-lines {
+      list-style: none;
+      padding: 18px 24px;
+      margin: 0;
+      flex: 1;
+      background: #f0f4f8;
+      border-left: 4px solid var(--berry);
+      border-radius: 6px;
+      overflow: auto;
+      font-family: 'Georgia', 'Palatino', serif;
+      font-style: italic;
+    }
+    .pseudo-lines li {
+      font-size: 0.8em;
+      line-height: 1.7;
+      color: var(--dark);
+      padding: 2px 0;
+    }
+    .pseudo-num {
+      color: var(--berry);
+      font-weight: bold;
+      font-style: normal;
+      margin-right: 8px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 0.85em;
+    }
+    .pseudo-footer {
+      display: flex;
+      gap: 40px;
+      background: var(--berry);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 0 0 6px 6px;
+      font-size: 0.72em;
+      flex-shrink: 0;
+      margin-top: -4px;
+    }
+    .pseudo-footer strong {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-style: normal;
+    }
+
+    /* ----- Callout ----- */
+    .slide-callout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .callout-box {
+      border-left: 6px solid var(--berry);
+      background: #fdf0f5;
+      border-radius: 8px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1;
+      margin-top: 8px;
+    }
+    .callout-icon {
+      font-size: 2.4em;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 4px;
+    }
+    .callout-body {
+      font-size: 0.95em;
+      line-height: 1.75;
+      color: var(--dark);
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <script>
+    if (window.location.hash.indexOf('print-pdf') !== -1) {
+      window.location.replace(window.location.href.split('#')[0] + '?print-pdf');
+    }
+  </script>
+  <div class="reveal">
+    <div class="slides">
+<section class="slide-cover" data-background-color="#B5245A">
+  <div class="cover-uni">University of Geneva · CUI BSc · Algorithmics &amp; Data Structures</div>
+  <h1 class="cover-title">Introduction to the Project</h1>
+  <div class="cover-subtitle">Seminar 4</div>
+  <div class="print-slide-num">1 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">What Is the Project?</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">You will work with real physiological data from 12 UNIGE study participants</li>
+<li class="fragment" data-fragment-index="1">Data source: Withings ScanWatch smartwatches — step activity, daily totals</li>
+<li class="fragment" data-fragment-index="2">Your task: apply course algorithms (sorting, searching, DP, graphs, …)</li>
+<li class="sub-bullet fragment" data-fragment-index="3">to answer concrete questions derived from the dataset</li>
+<li class="fragment" data-fragment-index="4">Goal: algorithmic thinking — not just calling pandas functions</li>
+<li class="sub-bullet fragment" data-fragment-index="5">You must implement the algorithm yourself and justify your choices</li>
+<li class="fragment" data-fragment-index="6">Optional: use your own smartphone data (Withings App) for extra analyses</li>
+  </ul>
+  <div class="print-slide-num">2 / 16</div>
+</section>
+<section class="slide-table">
+  <h2 class="slide-title">Your Grade — 30% of the Final Mark</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Component</th><th>Weight</th><th>Deadline</th></tr></thead>
+      <tbody><tr class="odd"><td>Code repository + README</td><td>15%</td><td>19 May 2026, 23:59</td></tr>
+<tr class=""><td>Peer code review</td><td>15%</td><td>31 May 2026, 23:59</td></tr>
+<tr class="odd"><td>Total for the project</td><td>30%</td><td>—</td></tr>
+</tbody>
+    </table>
+  </div>
+  <div class="print-slide-num">3 / 16</div>
+</section>
+<section class="slide-table">
+  <h2 class="slide-title">How the Code Part (15%) Is Graded</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Criterion</th><th>Weight inside 15%</th><th>What earns full points</th></tr></thead>
+      <tbody><tr class="odd"><td>Correctness</td><td>5%</td><td>Outputs are correct on normal + edge cases</td></tr>
+<tr class=""><td>Algorithmic reasoning</td><td>4%</td><td>Data structure choice + clear Big-O argument</td></tr>
+<tr class="odd"><td>Tests</td><td>2%</td><td>Meaningful tests, including edge cases</td></tr>
+<tr class=""><td>README quality</td><td>3%</td><td>Clear explanation per analysis</td></tr>
+<tr class="odd"><td>Code quality</td><td>1%</td><td>Readable, structured, PEP-8-friendly</td></tr>
+</tbody>
+    </table>
+  </div>
+  <div class="print-slide-num">4 / 16</div>
+</section>
+<section class="slide-table">
+  <h2 class="slide-title">How the Peer Review Part (15%) Is Graded</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Criterion</th><th>Weight inside 15%</th><th>What earns full points</th></tr></thead>
+      <tbody><tr class="odd"><td>Coverage</td><td>5%</td><td>Reviews all required analyses and README</td></tr>
+<tr class=""><td>Technical accuracy</td><td>5%</td><td>Correct comments on correctness/complexity/tests</td></tr>
+<tr class="odd"><td>Actionable feedback</td><td>3%</td><td>Specific suggestions with concrete fixes</td></tr>
+<tr class=""><td>Professionalism</td><td>2%</td><td>Respectful tone and clear structure</td></tr>
+</tbody>
+    </table>
+  </div>
+  <div class="print-slide-num">5 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Definition of Done (Minimum Requirements)</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">A GitLab repository with clean structure and run instructions</li>
+<li class="fragment" data-fragment-index="1">At least 3 analyses: 1 Beginner + 1 Intermediate + 1 Advanced</li>
+<li class="fragment" data-fragment-index="2">Each analysis implemented as your own Python function(s)</li>
+<li class="fragment" data-fragment-index="3">README section for each analysis: problem · algorithm · why · complexity</li>
+<li class="fragment" data-fragment-index="4">Tests for core functions (include edge cases)</li>
+<li class="fragment" data-fragment-index="5">No private data committed — `researchdata/` must be in .gitignore</li>
+  </ul>
+  <div class="print-slide-num">6 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Good Submission Example (What We Expect)</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">Analysis question: Which date has the highest total steps?</li>
+<li class="fragment" data-fragment-index="1">Implementation: linear scan with dict aggregation by date</li>
+<li class="fragment" data-fragment-index="2">README example: &#x27;O(n) time, O(d) space (d = distinct dates)&#x27;</li>
+<li class="fragment" data-fragment-index="3">Test evidence: normal case + empty input + single-row input</li>
+<li class="fragment" data-fragment-index="4">Comparison note (intermediate/advanced): naive vs optimised runtime</li>
+<li class="fragment" data-fragment-index="5">Result: clear code, reproducible run instructions, justified choices</li>
+<li class="fragment" data-fragment-index="6">Example submission: https://gitlab.unige.ch/alg-26/spring-2026/alexander-horst</li>
+  </ul>
+  <div class="print-slide-num">7 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">The Dataset</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">Withings ScanWatch — step counts recorded per hour and per day</li>
+<li class="fragment" data-fragment-index="1">12 anonymised participants, several months of continuous data</li>
+<li class="fragment" data-fragment-index="2">Download the archive from Yareta:</li>
+<li class="sub-bullet fragment" data-fragment-index="3">https://yareta.unige.ch/archives/19bf7f3c-7d07-48be-8c03-9f754f766906</li>
+<li class="fragment" data-fragment-index="4">CSV format — one file per participant (e.g. 1487.csv)</li>
+<li class="fragment" data-fragment-index="5">Read the provided documentation to understand:</li>
+<li class="sub-bullet fragment" data-fragment-index="6">Who collected the data? Sample size? How many days?</li>
+  </ul>
+  <div class="print-slide-num">8 / 16</div>
+</section>
+<section class="slide-table">
+  <h2 class="slide-title">Three Levels of Analyses (Wearable Data)</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Level</th><th>What Is Expected</th><th>Example Questions</th></tr></thead>
+      <tbody><tr class="odd"><td>Beginner (start now)</td><td>Explicit loops, clear logic, simple complexity claims</td><td>Most active day (linear scan) · weekly average (dict) · rank users with bubble sort (learning baseline)</td></tr>
+<tr class=""><td>Intermediate (after Week 6-7)</td><td>Better structures + baseline comparison + timing evidence</td><td>Moving-average trends (sliding window) · unusual days (rule-based) · rank users by multiple metrics</td></tr>
+<tr class="odd"><td>Advanced (after Week 8-11)</td><td>Algorithmic depth + stronger evidence + careful scope</td><td>Longest streak (DP) · day-similarity graph with BFS/DFS · optional Dijkstra on activity-state transitions</td></tr>
+</tbody>
+    </table>
+  </div>
+  <div class="print-slide-num">9 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">You Need One Analysis From Each Level</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">Minimum: 3 analyses total — at least one Beginner, one Intermediate, one Advanced</li>
+<li class="fragment" data-fragment-index="1">You are free to design your own questions beyond these examples</li>
+<li class="fragment" data-fragment-index="2">Each analysis must be implemented as a Python function (not just pandas)</li>
+<li class="fragment" data-fragment-index="3">For Intermediate and Advanced: compare to a simpler baseline approach</li>
+<li class="sub-bullet fragment" data-fragment-index="4">&#x27;My O(n log n) sort is X× faster than brute force on 10,000 rows&#x27;</li>
+<li class="fragment" data-fragment-index="5">State how you measured timing (input size and number of runs)</li>
+<li class="fragment" data-fragment-index="6">Tip: start with Beginner after week 6, move up over coming weeks</li>
+  </ul>
+  <div class="print-slide-num">10 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">What Goes in the README</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">For each analysis, answer these four questions:</li>
+<li class="sub-bullet fragment" data-fragment-index="1">1. Problem — what real question are you answering?</li>
+<li class="sub-bullet fragment" data-fragment-index="2">2. Algorithm — which algorithm/data structure did you implement?</li>
+<li class="sub-bullet fragment" data-fragment-index="3">3. Why — why is this algorithm appropriate for this problem?</li>
+<li class="sub-bullet fragment" data-fragment-index="4">4. Complexity — what is the time and space complexity (Big-O)?</li>
+<li class="fragment" data-fragment-index="5">The README is graded as seriously as the code itself</li>
+<li class="fragment" data-fragment-index="6">Think of it as a technical report, not a template dump</li>
+<li class="fragment" data-fragment-index="7">Include one short run example and one test example per analysis</li>
+  </ul>
+  <div class="print-slide-num">11 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Project Folder Structure</h2>
+  <ul class="bullets">
+<li class="sub-bullet fragment" data-fragment-index="0">├── researchdata/    ← gitignored! never commit private data</li>
+<li class="sub-bullet fragment" data-fragment-index="1">├── analyses/        ← your implementations here</li>
+<li class="sub-bullet fragment" data-fragment-index="2">│   ├── analysis_1.py</li>
+<li class="sub-bullet fragment" data-fragment-index="3">│   ├── analysis_2.py</li>
+<li class="sub-bullet fragment" data-fragment-index="4">│   └── analysis_3.py</li>
+<li class="sub-bullet fragment" data-fragment-index="5">├── requirements.txt</li>
+<li class="sub-bullet fragment" data-fragment-index="6">└── README.md          ← the most important file</li>
+<li class="fragment" data-fragment-index="7">Submissions are done via GitLab (UNIGE). Create your account: https://doc.eresearch.unige.ch/gitlab/start and retrieve your access tokens.</li>
+<li class="fragment" data-fragment-index="8">Then request access to: https://gitlab.unige.ch/alg-26/spring-2026 where you will create your own repository under your name.</li>
+  </ul>
+  <div class="print-slide-num">12 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Common Mistakes to Avoid</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">Committing data files to git — data is private, add to .gitignore</li>
+<li class="fragment" data-fragment-index="1">Calling df.sort_values() and calling it &#x27;sorting&#x27; — implement the sort</li>
+<li class="fragment" data-fragment-index="2">No README explanation — graders need to understand your algorithmic choices</li>
+<li class="fragment" data-fragment-index="3">No unit tests — at least test edge cases (empty input, single element)</li>
+<li class="fragment" data-fragment-index="4">No complexity analysis — always state time and space complexity</li>
+<li class="fragment" data-fragment-index="5">No reproducibility — missing run steps, dataset path, or timing protocol</li>
+<li class="fragment" data-fragment-index="6">Copying code without understanding every line — you will be asked about it</li>
+  </ul>
+  <div class="print-slide-num">13 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Today&#x27;s Exercises</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">Ex 1 — Download the dataset; load one CSV and print df.describe()</li>
+<li class="fragment" data-fragment-index="1">Ex 2 — Flatten all participant files into merged.csv</li>
+<li class="fragment" data-fragment-index="2">Ex 3 — Compute basic stats manually (min/max/mean steps per participant)</li>
+<li class="fragment" data-fragment-index="3">Ex 4 — find_most_active_day(): implement without df.idxmax()</li>
+<li class="fragment" data-fragment-index="4">Ex 5 — Longest streak of days above 8 000 steps (loop-based DP)</li>
+  </ul>
+  <div class="print-slide-num">14 / 16</div>
+</section>
+<section class="slide-content">
+  <h2 class="slide-title">Key Takeaways</h2>
+  <ul class="bullets">
+<li class="fragment" data-fragment-index="0">The project counts 30% of your final grade (15% code + 15% peer review)</li>
+<li class="fragment" data-fragment-index="1">Definition of done is explicit: 3 analyses + tests + README + clean repo</li>
+<li class="fragment" data-fragment-index="2">You must implement algorithms — not just call pandas functions</li>
+<li class="fragment" data-fragment-index="3">Justify every choice in your README: problem · algorithm · why · complexity</li>
+<li class="fragment" data-fragment-index="4">Keep data local — never commit `researchdata/` files to git</li>
+<li class="fragment" data-fragment-index="5">Start today: get the data loaded and one Beginner analysis running</li>
+<li class="fragment" data-fragment-index="6">Peer review in week 12 — write code that others can read and understand</li>
+  </ul>
+  <div class="print-slide-num">15 / 16</div>
+</section>
+<section class="slide-cover" data-background-color="#B5245A">
+  <div class="cover-uni">University of Geneva · CUI BSc · Algorithmics &amp; Data Structures</div>
+  <h1 class="cover-title">Thank You &amp; Have Fun!</h1>
+  <div class="cover-subtitle"></div>
+  <div class="print-slide-num">16 / 16</div>
+</section>
+    </div>
+  </div>
+  <a class="pdf-download-btn" href="#" onclick="openPrintPdf(event)" title="Save as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  </a>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/print/pdf.css" media="print" />
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    var isPrintMode = window.location.search.indexOf('print-pdf') !== -1;
+
+    if (isPrintMode) {
+      var pdfBtn = document.querySelector('.pdf-download-btn');
+      if (pdfBtn) pdfBtn.style.display = 'none';
+    }
+
+    Reveal.initialize({
+      hash: !isPrintMode,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      transitionSpeed: 'fast',
+      controls: !isPrintMode,
+      progress: !isPrintMode,
+      center: false,
+      width: 1280,
+      height: 720,
+      pdfMaxPagesPerSlide: 1,
+      pdfSeparateFragments: false,
+    });
+
+    Reveal.on('slidechanged', function() {
+      document.querySelectorAll('pre code:not(.hljs)').forEach(function(el) {
+        hljs.highlightElement(el);
+      });
+    });
+    hljs.configure({ languages: ['python'] });
+    document.querySelectorAll('pre code').forEach(function(el) {
+      hljs.highlightElement(el);
+    });
+
+    if (isPrintMode) {
+      Reveal.on('ready', function() {
+        setTimeout(function() { window.print(); }, 1200);
+      });
+    }
+
+    function openPrintPdf(e) {
+      e.preventDefault();
+      var base = window.location.href.split('?')[0].split('#')[0];
+      window.open(base + '?print-pdf', '_blank');
+    }
+  </script>
+</body>
+</html>

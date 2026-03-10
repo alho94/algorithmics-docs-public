@@ -27,10 +27,10 @@ project:
           title: "1 · Python Basics"
         - file: docs/seminars/en/02_python_control_structures.ipynb
           title: "2 · Python Basics I: Control Structures"
-        # - file: docs/seminars/en/03_python_data_structures.ipynb
-        #   title: "3 · Python Basics II: Data Structures"
-        # - file: docs/seminars/en/04_transfer_workshop.ipynb
-        #   title: "4 · Transfer Workshop & Project Kickoff"
+        - file: docs/seminars/en/03_python_data_structures.ipynb
+          title: "3 · Python Basics II: Data Structures"
+        - file: docs/seminars/en/04_transfer_workshop.ipynb
+          title: "4 · Transfer Workshop & Project Kickoff"
         # - file: docs/seminars/en/05_data_structures_impl.ipynb
         #   title: "5 · Data Structures"
         # - file: docs/seminars/en/06_algorithmic_complexity.ipynb
@@ -65,10 +65,10 @@ project:
               title: "1 · Python Basics"
             - file: docs/seminars/fr/02_python_control_structures.ipynb
               title: "2 · Bases de Python I : Contrôle"
-            # - file: docs/seminars/fr/03_python_data_structures.ipynb
-            #   title: "3 · Bases de Python II : Données"
-            # - file: docs/seminars/fr/04_transfer_workshop.ipynb
-            #   title: "4 · Atelier de transfert & Projet"
+            - file: docs/seminars/fr/03_python_data_structures.ipynb
+              title: "3 · Bases de Python II : Données"
+            - file: docs/seminars/fr/04_transfer_workshop.ipynb
+              title: "4 · Atelier de transfert & Projet"
             # - file: docs/seminars/fr/05_data_structures_impl.ipynb
             #   title: "5 · Structures de données"
             # - file: docs/seminars/fr/06_algorithmic_complexity.ipynb

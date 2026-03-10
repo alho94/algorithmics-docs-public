@@ -10,9 +10,9 @@ Welcome to the seminar for **Algorithmics & Data Structures**. Each week, you wi
 | 0b | Prerequisites: Git & GitHub | — | [Session](./seminars/en/00_prequisits_git.ipynb) |
 | 1 | Python Basics | [Slides ↗](./_static/slides/en/01_environment_setup.html) | [Session](./seminars/en/01_python_basics.ipynb) |
 | 2 | Python Basics I: Control Structures | [Slides ↗](./_static/slides/en/02_python_control_structures.html) | [Session](./seminars/en/02_python_control_structures.ipynb) |
-<!-- | 3 | Python Basics II: Data Structures | [Slides ↗](./_static/slides/en/03_python_data_structures.html) | [Session](./seminars/en/03_python_data_structures.ipynb) | -->
-<!-- | 4 | Transfer Workshop & Project Kickoff | [Slides ↗](./_static/slides/en/04_project_kickoff.html) | [Session](./seminars/en/04_transfer_workshop.ipynb) |
-| 5 | Data Structures | [Slides ↗](./_static/slides/en/05_data_structures.html) | [Session](./seminars/en/05_data_structures_impl.ipynb) |
+| 3 | Python Basics II: Data Structures | [Slides ↗](./_static/slides/en/03_python_data_structures.html) | [Session](./seminars/en/03_python_data_structures.ipynb) |
+| 4 | Transfer Workshop & Project Kickoff | [Slides ↗](./_static/slides/en/04_project_kickoff.html) | [Session](./seminars/en/04_transfer_workshop.ipynb) |
+<!-- | 5 | Data Structures | [Slides ↗](./_static/slides/en/05_data_structures.html) | [Session](./seminars/en/05_data_structures_impl.ipynb) |
 | 6 | Algorithmic Complexity | [Slides ↗](./_static/slides/en/06_algorithmic_complexity.html) | [Session](./seminars/en/06_algorithmic_complexity.ipynb) |
 | 7 | Sorting and Searching | [Slides ↗](./_static/slides/en/07_sorting_searching.html) | [Session](./seminars/en/07_sorting_searching.ipynb) |
 | 8 | Trees and Graphs | [Slides ↗](./_static/slides/en/08_trees_graphs.html) | [Session](./seminars/en/08_trees_graphs.ipynb) |
