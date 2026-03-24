@@ -1025,7 +1025,7 @@ elapsed = time.perf_counter() - start
   <ul class="bullets">
 <li class="fragment" data-fragment-index="0"><strong>O(1)</strong>: A single, direct operation i.e. a set lookup (Instant) as we know the exact address of the item.</li>
 <li class="fragment" data-fragment-index="1"><strong>O(log n)</strong>: Tearing a phonebook in half repeatedly until you find the right page. Doubling the book&#x27;s size only adds one extra tear.</li>
-<li class="fragment" data-fragment-index="2"><strong>O(n log n)</strong>: You have $n$ loose pages of a phonebook dropped on the floor in a random pile. To put them in order, you divide the pile into two, then those into two (that&#x27;s the log n part), and at every level of splitting, you have to look at every page to decide which pile it belongs in (that&#x27;s the n part).</li>
+<li class="fragment" data-fragment-index="2"><strong>O(n log n)</strong>: You have n loose pages of a phonebook dropped on the floor in a random pile. To put them in order, you divide the pile into two, then those into two (that&#x27;s the log n part), and at every level of splitting, you have to look at every page to decide which pile it belongs in (that&#x27;s the n part).</li>
 <li class="fragment" data-fragment-index="3"><strong>O(n)</strong>: Reading every name in the phonebook until you find the right one.</li>
 <li class="fragment" data-fragment-index="4"><strong>O(n²)</strong>: For every person in the book, you have to read the whole book again.</li>
   </ul>
