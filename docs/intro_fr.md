@@ -16,8 +16,9 @@ Bienvenue dans le séminaire d'**Algorithmique & Structures de données**. Chaqu
 | 2 | Bases de Python I : Structures de contrôle | [Diapositives ↗](./_static/slides/fr/02_python_control_structures.html) | [Séance](./seminars/fr/02_python_control_structures.ipynb) |
 | 3 | Bases de Python II : Structures de données | [Diapositives ↗](./_static/slides/fr/03_python_data_structures.html) | [Séance](./seminars/fr/03_python_data_structures.ipynb) |
 | 4 | Atelier de transfert & Lancement du projet | [Diapositives ↗](./_static/slides/fr/04_project_kickoff.html) | [Séance](./seminars/fr/04_transfer_workshop.ipynb) |
-<!-- | 5 | Structures de données | [Diapositives ↗](./_static/slides/fr/05_data_structures.html) | [Séance](./seminars/fr/05_data_structures_impl.ipynb) |
-| 6 | Complexité algorithmique | [Diapositives ↗](./_static/slides/fr/06_algorithmic_complexity.html) | [Séance](./seminars/fr/06_algorithmic_complexity.ipynb) |
+| 5 | Complexité algorithmique | [Diapositives ↗](./_static/slides/fr/05_algorithmic_complexity.html) | [Séance](./seminars/fr/05_algorithmic_complexity.ipynb) |
+<!-- 
+| 6 | Structures de données | [Diapositives ↗](./_static/slides/fr/06_data_structures.html) | [Séance](./seminars/fr/06_data_structures_impl.ipynb) |
 | 7 | Tri et recherche | [Diapositives ↗](./_static/slides/fr/07_sorting_searching.html) | [Séance](./seminars/fr/07_sorting_searching.ipynb) |
 | 8 | Arbres et graphes | [Diapositives ↗](./_static/slides/fr/08_trees_graphs.html) | [Séance](./seminars/fr/08_trees_graphs.ipynb) |
 | 9 | Résolution de problèmes I : Bases | [Diapositives ↗](./_static/slides/fr/09_problem_solving_I.html) | [Séance](./seminars/fr/09_problem_solving_I.ipynb) |

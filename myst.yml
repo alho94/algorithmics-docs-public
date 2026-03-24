@@ -31,10 +31,10 @@ project:
           title: "3 · Python Basics II: Data Structures"
         - file: docs/seminars/en/04_transfer_workshop.ipynb
           title: "4 · Transfer Workshop & Project Kickoff"
-        # - file: docs/seminars/en/05_data_structures_impl.ipynb
-        #   title: "5 · Data Structures"
-        # - file: docs/seminars/en/06_algorithmic_complexity.ipynb
-        #   title: "6 · Algorithmic Complexity"
+        - file: docs/seminars/en/05_algorithmic_complexity.ipynb
+          title: "5 · Analysis & Complexity"
+        # - file: docs/seminars/en/06_data_structures_impl.ipynb
+        #   title: "6 · Data Structures"
         # - file: docs/seminars/en/07_sorting_searching.ipynb
         #   title: "7 · Sorting and Searching"
         # - file: docs/seminars/en/08_trees_graphs.ipynb
@@ -69,10 +69,10 @@ project:
               title: "3 · Bases de Python II : Données"
             - file: docs/seminars/fr/04_transfer_workshop.ipynb
               title: "4 · Atelier de transfert & Projet"
-            # - file: docs/seminars/fr/05_data_structures_impl.ipynb
-            #   title: "5 · Structures de données"
-            # - file: docs/seminars/fr/06_algorithmic_complexity.ipynb
-            #   title: "6 · Complexité algorithmique"
+            - file: docs/seminars/fr/05_algorithmic_complexity.ipynb
+              title: "5 · Complexité algorithmique"
+            # - file: docs/seminars/fr/06_data_structures_impl.ipynb
+            #   title: "6 · Structures de données"
             # - file: docs/seminars/fr/07_sorting_searching.ipynb
             #   title: "7 · Tri et recherche"
             # - file: docs/seminars/fr/08_trees_graphs.ipynb
