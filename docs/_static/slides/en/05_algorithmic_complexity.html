@@ -993,7 +993,8 @@ elapsed = time.perf_counter() - start
 <li class="fragment" data-fragment-index="1"><strong>1 Step</strong>: Variable assignment (`x = 10`)</li>
 <li class="fragment" data-fragment-index="2"><strong>1 Step</strong>: Comparing two values (`a &lt; b`)</li>
 <li class="fragment" data-fragment-index="3"><strong>1 Step</strong>: Accessing a list index (`my_list[0]`)</li>
-<li class="fragment" data-fragment-index="4">This gives us a formula <strong>T(n)</strong> that works on <strong>any</strong> computer.</li>
+<li class="fragment" data-fragment-index="4">This gives us a formula <strong>T(n)</strong> that works regardless of the computer.</li>
+<li class="fragment" data-fragment-index="5">*Big-O* is a measure of the worst-case scenario explaing how fast something can grow if the input size grows.</li>
   </ul>
   <div class="print-slide-num">7 / 21</div>
 </section>
@@ -1022,10 +1023,11 @@ elapsed = time.perf_counter() - start
 <section class="slide-content">
   <h2 class="slide-title">Big-O: Physical Analogies</h2>
   <ul class="bullets">
-<li class="fragment" data-fragment-index="0"><strong>O(1)</strong>: A single, direct operation i.e. a set lookup (Instant).</li>
-<li class="fragment" data-fragment-index="1"><strong>O(log n)</strong>: The &quot;High-Low&quot; game; splitting the search area in half each time.</li>
-<li class="fragment" data-fragment-index="2"><strong>O(n)</strong>: Reading every name in the phonebook until you find the right one.</li>
-<li class="fragment" data-fragment-index="3"><strong>O(n²)</strong>: For every person in the book, you have to read the whole book again.</li>
+<li class="fragment" data-fragment-index="0"><strong>O(1)</strong>: A single, direct operation i.e. a set lookup (Instant) as we know the exact address of the item.</li>
+<li class="fragment" data-fragment-index="1"><strong>O(log n)</strong>: Tearing a phonebook in half repeatedly until you find the right page. Doubling the book&#x27;s size only adds one extra tear.</li>
+<li class="fragment" data-fragment-index="2"><strong>O(n log n)</strong>: You have $n$ loose pages of a phonebook dropped on the floor in a random pile. To put them in order, you divide the pile into two, then those into two (that&#x27;s the log n part), and at every level of splitting, you have to look at every page to decide which pile it belongs in (that&#x27;s the n part).</li>
+<li class="fragment" data-fragment-index="3"><strong>O(n)</strong>: Reading every name in the phonebook until you find the right one.</li>
+<li class="fragment" data-fragment-index="4"><strong>O(n²)</strong>: For every person in the book, you have to read the whole book again.</li>
   </ul>
   <div class="print-slide-num">10 / 21</div>
 </section>
@@ -1138,8 +1140,8 @@ def equiv_D(p1, p2):
     </div>
     <div class="split-bullets">
       <ul class="bullets">
-<li><strong>At n=10</strong>: All strategies feel the same.</li>
-<li><strong>At n=1,000</strong>: Quadratic <strong>O(n²)</strong> begins to lag.</li>
+<li><strong>At n=50</strong>: All strategies feel the same.</li>
+<li><strong>At n=200</strong>: Quadratic <strong>O(n²)</strong> begins to lag.</li>
 <li><strong>At n=1,000,000</strong>: <strong>O(n²)</strong> is impossible; <strong>O(n)</strong> finishes instantly.</li>
 <li><strong>Lesson</strong>: The curve shape is the only thing that matters at scale.</li>
       </ul>
