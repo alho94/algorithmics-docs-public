@@ -13,9 +13,9 @@ Welcome to the seminar for **Algorithmics & Data Structures**. Each week, you wi
 | 3 | Python Basics II: Data Structures | [Slides ↗](./_static/slides/en/03_python_data_structures.html) | [Session](./seminars/en/03_python_data_structures.ipynb) |
 | 4 | Transfer Workshop & Project Kickoff | [Slides ↗](./_static/slides/en/04_project_kickoff.html) | [Session](./seminars/en/04_transfer_workshop.ipynb) |
 | 5 | Analysis & Complexity | [Slides ↗](./_static/slides/en/05_algorithmic_complexity.html) | [Session](./seminars/en/05_algorithmic_complexity.ipynb) |
+| 6 | Data Structures | [Slides ↗](./_static/slides/en/06_data_structures.html) | [Session](./seminars/en/06_data_structures_impl.ipynb) |
 
 <!-- 
-| 6 | Data Structures | [Slides ↗](./_static/slides/en/06_data_structures.html) | [Session](./seminars/en/06_data_structures_impl.ipynb) |
 | 7 | Sorting and Searching | [Slides ↗](./_static/slides/en/07_sorting_searching.html) | [Session](./seminars/en/07_sorting_searching.ipynb) |
 | 8 | Trees and Graphs | [Slides ↗](./_static/slides/en/08_trees_graphs.html) | [Session](./seminars/en/08_trees_graphs.ipynb) |
 | 9 | Problem Solving I: Basics | [Slides ↗](./_static/slides/en/09_problem_solving_I.html) | [Session](./seminars/en/09_problem_solving_I.ipynb) |
@@ -47,8 +47,9 @@ jupyter lab docs/seminars/en/
 
 ## Recommended but not mendatory references
 
+This course follows tightly the Runestone Academy book on [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html). Hence, we strongly recommend reading it. Additional, usefull resources are:
+
 - Cormen, Leiserson, Rivest & Stein — [*Introduction to Algorithms* (4th ed., MIT Press)](https://moodle.unige.ch/)
-- Runestone Academy — [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html)
 - [Python documentation](https://docs.python.org/3/)
 - A very good reference to start with ANY computer science topic is roadmap.sh. This course will cover topics from:
   - [Python Roadmap](https://roadmap.sh/python)
