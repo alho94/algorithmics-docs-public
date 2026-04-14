@@ -35,8 +35,8 @@ project:
           title: "5 · Analysis & Complexity"
         - file: docs/seminars/en/06_data_structures_impl.ipynb
           title: "6 · Data Structures"
-        # - file: docs/seminars/en/07_sorting_searching.ipynb
-        #   title: "7 · Sorting and Searching"
+        - file: docs/seminars/en/07_recursion.ipynb
+          title: "7 · Recursion"
         # - file: docs/seminars/en/08_trees_graphs.ipynb
         #   title: "8 · Trees and Graphs"
         # - file: docs/seminars/en/09_problem_solving_I.ipynb
@@ -73,8 +73,8 @@ project:
               title: "5 · Complexité algorithmique"
             - file: docs/seminars/fr/06_data_structures_impl.ipynb
               title: "6 · Structures de données"
-            # - file: docs/seminars/fr/07_sorting_searching.ipynb
-            #   title: "7 · Tri et recherche"
+            - file: docs/seminars/fr/07_recursion.ipynb
+              title: "7 · Récursivité"
             # - file: docs/seminars/fr/08_trees_graphs.ipynb
             #   title: "8 · Arbres et graphes"
             # - file: docs/seminars/fr/09_problem_solving_I.ipynb

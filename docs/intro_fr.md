@@ -18,8 +18,8 @@ Bienvenue dans le séminaire d'**Algorithmique & Structures de données**. Chaqu
 | 4 | Atelier de transfert & Lancement du projet | [Diapositives ↗](./_static/slides/fr/04_project_kickoff.html) | [Séance](./seminars/fr/04_transfer_workshop.ipynb) |
 | 5 | Complexité algorithmique | [Diapositives ↗](./_static/slides/fr/05_algorithmic_complexity.html) | [Séance](./seminars/fr/05_algorithmic_complexity.ipynb) |
 | 6 | Structures de données | [Diapositives ↗](./_static/slides/fr/06_data_structures.html) | [Séance](./seminars/fr/06_data_structures_impl.ipynb) |
+| 7 | Récursivité | [Diapositives ↗](./_static/slides/fr/07_recursion.html) | [Séance](./seminars/fr/07_recursion.ipynb) |
 <!-- 
-| 7 | Tri et recherche | [Diapositives ↗](./_static/slides/fr/07_sorting_searching.html) | [Séance](./seminars/fr/07_sorting_searching.ipynb) |
 | 8 | Arbres et graphes | [Diapositives ↗](./_static/slides/fr/08_trees_graphs.html) | [Séance](./seminars/fr/08_trees_graphs.ipynb) |
 | 9 | Résolution de problèmes I : Bases | [Diapositives ↗](./_static/slides/fr/09_problem_solving_I.html) | [Séance](./seminars/fr/09_problem_solving_I.ipynb) |
 | 10 | Résolution de problèmes II : Avancé | [Diapositives ↗](./_static/slides/fr/10_problem_solving_II.html) | [Séance](./seminars/fr/10_problem_solving_II.ipynb) |

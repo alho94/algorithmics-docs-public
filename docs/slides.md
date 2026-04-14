@@ -10,9 +10,10 @@ Slide decks for each seminar session — available as interactive **HTML** (Reve
 | 04 | Project Kickoff | [View slides ↗](./_static/slides/en/04_project_kickoff.html) | [Download PDF](./_static/slides/en/04_project_kickoff.html#print-pdf) |
 | 05 | Algorithmic Complexity | [View slides ↗](./_static/slides/en/05_algorithmic_complexity.html) | [Download PDF](./_static/slides/en/05_algorithmic_complexity.html#print-pdf) |
 | 06 | Data Structures | [View slides ↗](./_static/slides/en/06_data_structures.html) | [Download PDF](./_static/slides/en/06_data_structures.html#print-pdf) |
-<!--
-| 07 | Sorting and Searching | [View slides ↗](./_static/slides/en/07_sorting_searching.html) | [Download PDF](./_static/slides/en/07_sorting_searching.html#print-pdf) |
-| 08 | Trees and Graphs | [View slides ↗](./_static/slides/en/08_trees_graphs.html) | [Download PDF](./_static/slides/en/08_trees_graphs.html#print-pdf) |
+| 07 | Recursion | [View slides ↗](./_static/slides/en/07_recursion.html) | [Download PDF](./_static/slides/en/07_recursion.html#print-pdf) |
+
+
+<!--| 08 | Trees and Graphs | [View slides ↗](./_static/slides/en/08_trees_graphs.html) | [Download PDF](./_static/slides/en/08_trees_graphs.html#print-pdf) |
 | 09 | Problem Solving I: Basics | [View slides ↗](./_static/slides/en/09_problem_solving_I.html) | [Download PDF](./_static/slides/en/09_problem_solving_I.html#print-pdf) |
 | 10 | Problem Solving II: Advanced | [View slides ↗](./_static/slides/en/10_problem_solving_II.html) | [Download PDF](./_static/slides/en/10_problem_solving_II.html#print-pdf) |
 | 11 | Algorithmics Backup / Project | [View slides ↗](./_static/slides/en/11_backup_project.html) | [Download PDF](./_static/slides/en/11_backup_project.html#print-pdf) |
