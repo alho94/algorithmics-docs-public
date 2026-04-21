@@ -15,9 +15,9 @@ Welcome to the seminar for **Algorithmics & Data Structures**. Each week, you wi
 | 5 | Analysis & Complexity | [Slides ↗](./_static/slides/en/05_algorithmic_complexity.html) | [Session](./seminars/en/05_algorithmic_complexity.ipynb) |
 | 6 | Data Structures | [Slides ↗](./_static/slides/en/06_data_structures.html) | [Session](./seminars/en/06_data_structures_impl.ipynb) |
 | 7 | Recursion | [Slides ↗](./_static/slides/en/07_recursion.html) | [Session](./seminars/en/07_recursion.ipynb) |
+| 8 | Sorting and Searching | [Slides ↗](./_static/slides/en/08_sorting_searching.html) | [Session](./seminars/en/08_sorting_searching.ipynb) |
 
 <!-- 
-| 8 | Trees and Graphs | [Slides ↗](./_static/slides/en/08_trees_graphs.html) | [Session](./seminars/en/08_trees_graphs.ipynb) |
 | 9 | Problem Solving I: Basics | [Slides ↗](./_static/slides/en/09_problem_solving_I.html) | [Session](./seminars/en/09_problem_solving_I.ipynb) |
 | 10 | Problem Solving II: Advanced | [Slides ↗](./_static/slides/en/10_problem_solving_II.html) | [Session](./seminars/en/10_problem_solving_II.ipynb) |
 | 11 | Algorithmics Backup / Project | [Slides ↗](./_static/slides/en/11_backup_project.html) | [Session](./seminars/en/11_backup_project.ipynb) |

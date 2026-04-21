@@ -1055,7 +1055,10 @@ def fib_memo(n, cache=None):
 # Python built-in:
 from functools import lru_cache
 @lru_cache(maxsize=None)
-def fib(n): return n if n &lt;= 1 else fib(n-1) + fib(n-2)</code></pre>
+def fib(n):
+    if n &lt;= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)</code></pre>
   <div class="print-slide-num">12 / 15</div>
 </section>
 <section class="slide-content">
